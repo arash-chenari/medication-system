@@ -11,5 +11,6 @@
    </ItemGroup>
    <ItemGroup>
      <ProjectReference Include="..\MedicationSystem.Entities\MedicationSystem.Entities.csproj" />
+     <ProjectReference Include="..\MedicationSystem.Services\MedicationSystem.Services.csproj" />
    </ItemGroup>
 </Project>

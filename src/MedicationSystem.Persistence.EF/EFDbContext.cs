@@ -3,12 +3,8 @@ using Microsoft.EntityFrameworkCore;
 
 namespace MedicationSystem.Persistence.EF
 {
-    public class EFDbContext : DbContext
+    public class EFDbContext(DbContextOptions<EFDbContext> options) : DbContext(options)
     {
-        public EFDbContext(DbContextOptions<DbContext> options) : base(options) 
-        {
-        }
-        
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);

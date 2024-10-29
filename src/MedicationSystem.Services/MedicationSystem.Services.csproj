@@ -5,4 +5,13 @@
         <Nullable>enable</Nullable>
     </PropertyGroup>
 
+    <ItemGroup>
+      <Folder Include="Medications\Exceptions\" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\MedicationSystem.Contracts\MedicationSystem.Contracts.csproj" />
+      <ProjectReference Include="..\MedicationSystem.Entities\MedicationSystem.Entities.csproj" />
+    </ItemGroup>
+
 </Project>

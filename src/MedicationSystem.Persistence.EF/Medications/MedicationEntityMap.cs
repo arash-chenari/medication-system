@@ -1,7 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
-namespace MedicationSystem.Persistence.EF.Medication;
+namespace MedicationSystem.Persistence.EF.Medications;
 
 public class MedicationEntityMap : IEntityTypeConfiguration<Entities.Medication>
 {
