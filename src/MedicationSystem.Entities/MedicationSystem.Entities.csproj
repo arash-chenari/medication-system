@@ -5,4 +5,8 @@
         <Nullable>enable</Nullable>
     </PropertyGroup>
 
+    <ItemGroup>
+      <ProjectReference Include="..\MedicationSystem.Contracts\MedicationSystem.Contracts.csproj" />
+    </ItemGroup>
+
 </Project>
