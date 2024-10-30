@@ -25,4 +25,15 @@ public class EFMedicationWriteRepository : IMedicationWriteRepository
         return await _writeDbContext.Medications
                         .AnyAsync(_ => _.Code == code);
     }
+
+    public async Task<Medication> GetMedicationById(int id)
+    {
+        return await _writeDbContext.Medications
+                      .FirstOrDefaultAsync(_ => _.Id == id);
+    }
+
+    public void Delete(Medication medication)
+    {
+        _writeDbContext.Medications.Remove(medication);
+    }
 }

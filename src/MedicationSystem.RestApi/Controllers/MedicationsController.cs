@@ -28,5 +28,13 @@ namespace MedicationSystem.RestApi.Controllers
             var query = new GetAllMedicationsQuery();
             return await _sender.Send(query);
         }
+
+        [HttpDelete("{id}")]
+        public async Task DelteMedicatoin(int id)
+        {
+            var command = new DeleteMedicationCommand { Id = id };
+
+            await _sender.Send(command);
+        }
     }
 }
