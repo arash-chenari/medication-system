@@ -20,6 +20,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MedicationSystem.Applicatio
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MedicationSystem.Application.Tests.Unit", "tests\MedicationSystem.Application.Tests.Unit\MedicationSystem.Application.Tests.Unit.csproj", "{FBA3BCDC-C61D-4943-BDA6-81EFFAD10CEB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MedicationSystem.Tests.Helpers", "tests\MedicationSystem.Tests.Helpers\MedicationSystem.Tests.Helpers.csproj", "{AEB77696-D112-498A-A532-1A084A93FB20}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -34,6 +36,7 @@ Global
 		{93D0BDF3-B455-4078-89B4-4916F6CB7095} = {0771418A-1CB2-4F89-B5A0-F82173DED693}
 		{20077FDD-8076-4074-AA50-2A78B3146F68} = {0771418A-1CB2-4F89-B5A0-F82173DED693}
 		{FBA3BCDC-C61D-4943-BDA6-81EFFAD10CEB} = {A4191F4C-081D-4F79-BC57-77EF6F388083}
+		{AEB77696-D112-498A-A532-1A084A93FB20} = {A4191F4C-081D-4F79-BC57-77EF6F388083}
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{93D0BDF3-B455-4078-89B4-4916F6CB7095}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -64,5 +67,9 @@ Global
 		{FBA3BCDC-C61D-4943-BDA6-81EFFAD10CEB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FBA3BCDC-C61D-4943-BDA6-81EFFAD10CEB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FBA3BCDC-C61D-4943-BDA6-81EFFAD10CEB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AEB77696-D112-498A-A532-1A084A93FB20}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AEB77696-D112-498A-A532-1A084A93FB20}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AEB77696-D112-498A-A532-1A084A93FB20}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AEB77696-D112-498A-A532-1A084A93FB20}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
