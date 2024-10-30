@@ -19,8 +19,7 @@ var configuration = new ConfigurationBuilder()
     .AddEnvironmentVariables()
     .Build();
 var connectionString = configuration.GetValue<string>("ConnectionString");
-// Add services to the container.
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
+
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddControllers();
@@ -36,7 +35,6 @@ builder.Services.AddMediatR(_ =>
 
 builder.Services.AddScoped<IMedicationWriteRepository, EFMedicationWriteRepository>();
 builder.Services.AddScoped<IMedicationReadRepository, EFMedicationReadRepository>();
-
 builder.Services.AddScoped<IUnitOfWork, EFUnitOfWork>();
 
 var app = builder.Build();
@@ -48,21 +46,26 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
-app.UseExceptionHandler(_ => _.Run( async context => 
-{
-    var exception = context.Features.Get<IExceptionHandlerPathFeature>()?.Error;
-    var errorType = exception?.GetType().Name.Replace("Exception", String.Empty);
-    var errorDescription = app.Environment.IsProduction() ? null : exception?.ToString();
-    var result = new
-    {
-        Error = errorType,
-        Description = errorDescription
-    };
-
-    context.Response.StatusCode = StatusCodes.Status500InternalServerError;
-    context.Response.ContentType = MediaTypeNames.Application.Json;
-    await context.Response.WriteAsJsonAsync(result);
-}));
+ConfigGlobalExceptionHandler(app);
 
 app.MapControllers();
 app.Run();
+
+void ConfigGlobalExceptionHandler(WebApplication webApplication)
+{
+    webApplication.UseExceptionHandler(_ => _.Run( async context => 
+    {
+        var exception = context.Features.Get<IExceptionHandlerPathFeature>()?.Error;
+        var errorType = exception?.GetType().Name.Replace("Exception", String.Empty);
+        var errorDescription = webApplication.Environment.IsProduction() ? null : exception?.ToString();
+        var result = new
+        {
+            Error = errorType,
+            Description = errorDescription
+        };
+
+        context.Response.StatusCode = StatusCodes.Status500InternalServerError;
+        context.Response.ContentType = MediaTypeNames.Application.Json;
+        await context.Response.WriteAsJsonAsync(result);
+    }));
+}
