@@ -7,7 +7,7 @@ public class MedicationEntityMap : IEntityTypeConfiguration<Entities.Medication>
 {
     public void Configure(EntityTypeBuilder<Entities.Medication> _)
     {
-        _.ToTable("Medication");
+        _.ToTable("Medications");
         _.HasKey(_ => _.Id);
         _.Property(_ => _.Id).UseIdentityColumn().IsRequired();
         _.Property(_ => _.Code).IsRequired().HasMaxLength(30);

@@ -1,9 +1,11 @@
 using System;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 using MedicationSystem.Contracts.Interfaces;
 using MedicationSystem.Entities;
 using MedicationSystem.Services.Medications.Contracts;
 using MedicationSystem.Services.Medications.Contracts.Dtos;
+using MedicationSystem.Services.Medications.Exceptions;
 
 namespace MedicationSystem.Services.Medications
 {
@@ -22,6 +24,8 @@ namespace MedicationSystem.Services.Medications
         
         public async Task AddAsync(AddMedicationDto dto)
         {
+            PreventToAddMedicationWithZeroQuantity(dto.Quantity);
+            
             var medication = new Medication
             {
                 Code = dto.Code,
@@ -32,6 +36,19 @@ namespace MedicationSystem.Services.Medications
             
             _medicationRepository.Add(medication);
             await _unitOfWork.CompleteAsync();
+        }
+
+        public async Task<IList<GetAllMedicationDto>> GetAllMedications()
+        {
+            return await _medicationRepository.GetAllMedications();
+        }
+
+        private void PreventToAddMedicationWithZeroQuantity(int quantity)
+        {
+            if (quantity <= 0)
+            {
+                throw new QuantityShouldBeGreaterThanZeroException();
+            }
         }
     }
 }
