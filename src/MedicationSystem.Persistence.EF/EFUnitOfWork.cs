@@ -1,34 +1,35 @@
 using System.Threading.Tasks;
-using MedicationSystem.Contracts.Interfaces;
+using MedicationSystem.Application.Abstractions;
+using MedicationSystem.Domain.Abstractions;
 
 namespace MedicationSystem.Persistence.EF;
 
 public class EFUnitOfWork : IUnitOfWork
 {
-    private readonly EFDbContext _dbContext;
+    private readonly EFWriteDbContext _writeDbContext;
     
-    public EFUnitOfWork(EFDbContext dbContext)
+    public EFUnitOfWork(EFWriteDbContext writeDbContext)
     {
-        _dbContext = dbContext;
+        _writeDbContext = writeDbContext;
     }
     
     public void Begin()
     {
-        _dbContext.Database.BeginTransaction();
+        _writeDbContext.Database.BeginTransaction();
     }
 
     public async Task CommitAsync()
     {
-       await  _dbContext.Database.CommitTransactionAsync();
+       await  _writeDbContext.Database.CommitTransactionAsync();
     }
 
     public void RollBack()
     {
-        _dbContext.Database.RollbackTransaction();
+        _writeDbContext.Database.RollbackTransaction();
     }
 
     public async Task CompleteAsync()
     {
-        await _dbContext.SaveChangesAsync();
+        await _writeDbContext.SaveChangesAsync();
     }
 }

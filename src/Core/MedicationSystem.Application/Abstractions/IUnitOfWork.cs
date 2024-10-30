@@ -1,6 +1,4 @@
-using System.Threading.Tasks;
-
-namespace MedicationSystem.Contracts.Interfaces
+namespace MedicationSystem.Application.Abstractions
 {
     public interface IUnitOfWork
     {

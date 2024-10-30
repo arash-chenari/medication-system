@@ -1,4 +1,4 @@
-namespace MedicationSystem.Entities.Enums
+namespace MedicationSystem.Domain.Entities.Enums
 {
     public enum MedicationType : short
     {

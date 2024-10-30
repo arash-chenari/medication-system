@@ -1,6 +1,7 @@
 using System;
 using System.Threading.Tasks;
 using MedicationSystem.Contracts.Interfaces;
+using MedicationSystem.Domain.Abstractions;
 using MedicationSystem.Entities;
 using MedicationSystem.Services.Medications.Contracts;
 using MedicationSystem.Services.Medications.Contracts.Dtos;

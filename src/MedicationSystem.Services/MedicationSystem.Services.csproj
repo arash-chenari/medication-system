@@ -10,8 +10,7 @@
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\MedicationSystem.Contracts\MedicationSystem.Contracts.csproj" />
-      <ProjectReference Include="..\MedicationSystem.Entities\MedicationSystem.Entities.csproj" />
+      <ProjectReference Include="..\Core\MedicationSystem.Domain\MedicationSystem.Domain.csproj" />
     </ItemGroup>
 
 </Project>

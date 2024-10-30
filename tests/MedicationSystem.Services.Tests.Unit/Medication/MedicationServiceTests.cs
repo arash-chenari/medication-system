@@ -1,5 +1,6 @@
 using FluentAssertions;
 using MedicationSystem.Contracts.Interfaces;
+using MedicationSystem.Domain.Abstractions;
 using MedicationSystem.Entities.Enums;
 using MedicationSystem.Infrastructure.Test;
 using MedicationSystem.Persistence.EF;

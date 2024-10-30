@@ -24,7 +24,6 @@
     <ItemGroup>
       <ProjectReference Include="..\..\src\MedicationSystem.Infrastructure\MedicationSystem.Infrastructure.csproj" />
       <ProjectReference Include="..\..\src\MedicationSystem.Persistence.EF\MedicationSystem.Persistence.EF.csproj" />
-      <ProjectReference Include="..\..\src\MedicationSystem.Services\MedicationSystem.Services.csproj" />
     </ItemGroup>
 
 </Project>

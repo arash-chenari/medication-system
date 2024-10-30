@@ -3,10 +3,6 @@
     <PropertyGroup>
         <TargetFramework>netstandard2.1</TargetFramework>
         <Nullable>enable</Nullable>
+        <RootNamespace>MedicationSystem.Domain</RootNamespace>
     </PropertyGroup>
-
-    <ItemGroup>
-      <ProjectReference Include="..\MedicationSystem.Contracts\MedicationSystem.Contracts.csproj" />
-    </ItemGroup>
-
 </Project>
