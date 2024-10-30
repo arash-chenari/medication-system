@@ -14,10 +14,21 @@
         <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.8.0"/>
         <PackageReference Include="xunit" Version="2.5.3"/>
         <PackageReference Include="xunit.runner.visualstudio" Version="2.5.3"/>
+        <PackageReference Include="FluentAssertions" Version="6.12.1" />
+        <PackageReference Include="Moq" Version="4.20.72" />
     </ItemGroup>
 
     <ItemGroup>
         <Using Include="Xunit"/>
+    </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="Medications\Queries\" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\..\src\MedicationSystem.Infrastructure\MedicationSystem.Infrastructure.csproj" />
+      <ProjectReference Include="..\..\src\MedicationSystem.Persistence.EF\MedicationSystem.Persistence.EF.csproj" />
     </ItemGroup>
 
 </Project>

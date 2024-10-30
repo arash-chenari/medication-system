@@ -14,7 +14,7 @@ namespace MedicationSystem.Domain.Entities
         {
             if (quantity <= 0)
             {
-                throw new QuentityShouldBeGreaterThanZeroException();
+                throw new QuantityShouldBeGreaterThanZeroException();
             }
 
             Code = code;
