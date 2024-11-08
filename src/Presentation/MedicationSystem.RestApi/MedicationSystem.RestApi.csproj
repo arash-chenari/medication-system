@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
     <PropertyGroup>
         <TargetFramework>net8.0</TargetFramework>
@@ -17,8 +17,8 @@
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\MedicationSystem.Persistence.EF\MedicationSystem.Persistence.EF.csproj" />
-      <ProjectReference Include="..\MedicationSystem.Services\MedicationSystem.Services.csproj" />
+      <ProjectReference Include="..\..\Infrastructure\MedicationSystem.Persistence.EF\MedicationSystem.Persistence.EF.csproj" />
+      <ProjectReference Include="..\..\Core\MedicationSystem.Services\MedicationSystem.Services.csproj" />
     </ItemGroup>
 
 </Project>

@@ -22,9 +22,9 @@
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\..\src\MedicationSystem.Infrastructure\MedicationSystem.Infrastructure.csproj" />
-      <ProjectReference Include="..\..\src\MedicationSystem.Persistence.EF\MedicationSystem.Persistence.EF.csproj" />
-      <ProjectReference Include="..\..\src\MedicationSystem.Services\MedicationSystem.Services.csproj" />
+      <ProjectReference Include="..\..\src\Infrastructure\MedicationSystem.Infrastructure\MedicationSystem.Infrastructure.csproj" />
+      <ProjectReference Include="..\..\src\Infrastructure\MedicationSystem.Persistence.EF\MedicationSystem.Persistence.EF.csproj" />
+      <ProjectReference Include="..\..\src\Core\MedicationSystem.Services\MedicationSystem.Services.csproj" />
     </ItemGroup>
 
 </Project>
