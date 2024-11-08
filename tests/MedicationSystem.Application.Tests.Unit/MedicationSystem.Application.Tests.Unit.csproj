@@ -27,6 +27,8 @@
     </ItemGroup>
 
     <ItemGroup>
+      <ProjectReference Include="..\..\src\Infrastructure\MedicationSystem.Infrastructure\MedicationSystem.Infrastructure.csproj" />
+      <ProjectReference Include="..\..\src\Infrastructure\MedicationSystem.Persistence.EF\MedicationSystem.Persistence.EF.csproj" />
       <ProjectReference Include="..\..\src\MedicationSystem.Infrastructure\MedicationSystem.Infrastructure.csproj" />
       <ProjectReference Include="..\..\src\MedicationSystem.Persistence.EF\MedicationSystem.Persistence.EF.csproj" />
       <ProjectReference Include="..\MedicationSystem.Tests.Helpers\MedicationSystem.Tests.Helpers.csproj" />

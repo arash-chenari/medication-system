@@ -6,13 +6,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{A4191F4C
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MedicationSystem.Domain", "src\Core\MedicationSystem.Domain\MedicationSystem.Domain.csproj", "{93D0BDF3-B455-4078-89B4-4916F6CB7095}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MedicationSystem.Migrations", "src\MedicationSystem.Migrations\MedicationSystem.Migrations.csproj", "{3305F202-E0B3-4263-8F68-AC68C4866AF5}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MedicationSystem.Migrations", "src\Infrastructure\MedicationSystem.Migrations\MedicationSystem.Migrations.csproj", "{3305F202-E0B3-4263-8F68-AC68C4866AF5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MedicationSystem.Infrastructure", "src\MedicationSystem.Infrastructure\MedicationSystem.Infrastructure.csproj", "{F8E1AC2E-12CE-4074-A3F2-C513F76771F5}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MedicationSystem.Infrastructure", "src\Infrastructure\MedicationSystem.Infrastructure\MedicationSystem.Infrastructure.csproj", "{F8E1AC2E-12CE-4074-A3F2-C513F76771F5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MedicationSystem.Persistence.EF", "src\MedicationSystem.Persistence.EF\MedicationSystem.Persistence.EF.csproj", "{7701D94F-CED2-4DC5-974D-11C7AAE1A17C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MedicationSystem.Persistence.EF", "src\Infrastructure\MedicationSystem.Persistence.EF\MedicationSystem.Persistence.EF.csproj", "{7701D94F-CED2-4DC5-974D-11C7AAE1A17C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MedicationSystem.RestApi", "src\MedicationSystem.RestApi\MedicationSystem.RestApi.csproj", "{08924021-5808-4BD5-A7EE-268F3A211B20}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MedicationSystem.RestApi", "src\Presentation\MedicationSystem.RestApi\MedicationSystem.RestApi.csproj", "{08924021-5808-4BD5-A7EE-268F3A211B20}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{0771418A-1CB2-4F89-B5A0-F82173DED693}"
 EndProject
@@ -22,21 +22,27 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MedicationSystem.Applicatio
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MedicationSystem.Tests.Helpers", "tests\MedicationSystem.Tests.Helpers\MedicationSystem.Tests.Helpers.csproj", "{AEB77696-D112-498A-A532-1A084A93FB20}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{0F622DD9-E0F3-4710-87B8-C5E8EAF07E21}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentation", "{0E0F8A82-278B-4C57-A926-7C08DFD05C10}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{3305F202-E0B3-4263-8F68-AC68C4866AF5} = {0BF48595-3E11-4B93-A560-DE0E9DA66EBA}
-		{F8E1AC2E-12CE-4074-A3F2-C513F76771F5} = {0BF48595-3E11-4B93-A560-DE0E9DA66EBA}
-		{7701D94F-CED2-4DC5-974D-11C7AAE1A17C} = {0BF48595-3E11-4B93-A560-DE0E9DA66EBA}
-		{08924021-5808-4BD5-A7EE-268F3A211B20} = {0BF48595-3E11-4B93-A560-DE0E9DA66EBA}
 		{0771418A-1CB2-4F89-B5A0-F82173DED693} = {0BF48595-3E11-4B93-A560-DE0E9DA66EBA}
 		{93D0BDF3-B455-4078-89B4-4916F6CB7095} = {0771418A-1CB2-4F89-B5A0-F82173DED693}
 		{20077FDD-8076-4074-AA50-2A78B3146F68} = {0771418A-1CB2-4F89-B5A0-F82173DED693}
 		{FBA3BCDC-C61D-4943-BDA6-81EFFAD10CEB} = {A4191F4C-081D-4F79-BC57-77EF6F388083}
 		{AEB77696-D112-498A-A532-1A084A93FB20} = {A4191F4C-081D-4F79-BC57-77EF6F388083}
+		{0F622DD9-E0F3-4710-87B8-C5E8EAF07E21} = {0BF48595-3E11-4B93-A560-DE0E9DA66EBA}
+		{7701D94F-CED2-4DC5-974D-11C7AAE1A17C} = {0F622DD9-E0F3-4710-87B8-C5E8EAF07E21}
+		{3305F202-E0B3-4263-8F68-AC68C4866AF5} = {0F622DD9-E0F3-4710-87B8-C5E8EAF07E21}
+		{F8E1AC2E-12CE-4074-A3F2-C513F76771F5} = {0F622DD9-E0F3-4710-87B8-C5E8EAF07E21}
+		{0E0F8A82-278B-4C57-A926-7C08DFD05C10} = {0BF48595-3E11-4B93-A560-DE0E9DA66EBA}
+		{08924021-5808-4BD5-A7EE-268F3A211B20} = {0E0F8A82-278B-4C57-A926-7C08DFD05C10}
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{93D0BDF3-B455-4078-89B4-4916F6CB7095}.Debug|Any CPU.ActiveCfg = Debug|Any CPU

@@ -4,6 +4,7 @@
         <TargetFramework>net8.0</TargetFramework>
         <Nullable>enable</Nullable>
         <ImplicitUsings>enable</ImplicitUsings>
+        <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
     </PropertyGroup>
 
     <ItemGroup>
@@ -18,8 +19,14 @@
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\Core\MedicationSystem.Application\MedicationSystem.Application.csproj" />
-      <ProjectReference Include="..\MedicationSystem.Persistence.EF\MedicationSystem.Persistence.EF.csproj" />
+      <ProjectReference Include="..\..\Core\MedicationSystem.Application\MedicationSystem.Application.csproj" />
+      <ProjectReference Include="..\..\Infrastructure\MedicationSystem.Persistence.EF\MedicationSystem.Persistence.EF.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Content Include="..\..\.dockerignore">
+        <Link>.dockerignore</Link>
+      </Content>
     </ItemGroup>
 
 </Project>

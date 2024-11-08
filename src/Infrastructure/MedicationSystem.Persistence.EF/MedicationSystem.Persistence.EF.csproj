@@ -10,7 +10,7 @@
        
    </ItemGroup>
    <ItemGroup>
-     <ProjectReference Include="..\Core\MedicationSystem.Application\MedicationSystem.Application.csproj" />
-     <ProjectReference Include="..\Core\MedicationSystem.Domain\MedicationSystem.Domain.csproj" />
+     <ProjectReference Include="..\..\Core\MedicationSystem.Application\MedicationSystem.Application.csproj" />
+     <ProjectReference Include="..\..\Core\MedicationSystem.Domain\MedicationSystem.Domain.csproj" />
    </ItemGroup>
 </Project>

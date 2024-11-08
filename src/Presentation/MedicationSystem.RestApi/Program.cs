@@ -3,14 +3,10 @@ using System.Net.Mime;
 using MedicationSystem.Application.Abstractions;
 using MedicationSystem.Application.Abstractions.Medications;
 using MedicationSystem.Application.Medications.Commands;
-using MedicationSystem.Domain.Abstractions;
 using MedicationSystem.Persistence.EF;
 using MedicationSystem.Persistence.EF.Medications;
 using Microsoft.AspNetCore.Diagnostics;
-using Microsoft.AspNetCore.Http.Json;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Options;
-using Newtonsoft.Json;
 
 var builder = WebApplication.CreateBuilder(args);
 var configuration = new ConfigurationBuilder()
